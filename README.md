@@ -5,11 +5,11 @@ This is a port of the [Adafruit Arduino driver for the HTU21D(F) sensor](https:/
 
 Usage is extremely simple....
 
-in mos.yml, add to **libs:** section,
+in _**mos.yml**_, add to **libs:** section,
 
 `  - origin: https://github.com/pedalPusher68/arduino-adafruit-htu21df`
   
-in your **init.js**, add something like the following,
+in your _**init.js**_, add something like the following,
 
 ```javascript
 load('api_arduino_htu21df.js');
