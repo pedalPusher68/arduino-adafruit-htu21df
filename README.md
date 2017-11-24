@@ -11,18 +11,21 @@ in mos.yml, add to **libs:** section,
   
 in your **init.js**, add something like the following,
 
-`load('api_arduino_htu21df.js');`
+```javascript
+load('api_arduino_htu21df.js');
+```
 
 and
 
-`// Initialize Adafruit_HTU21DF library
+```javascript
+// Initialize Adafruit_HTU21DF library
 let htu = Adafruit_HTU21DF.create();
 htu.begin();
 let htuGetData = function () {
     print('HTU21D:  T: ', htu.readTemperature() ,'C     RH: ', htu.readHumidity(), '%');
 };
 let htuTimer = Timer.set(10000 /* milliseconds */, true /* repeat */, htuGetData, null);
-`
+```
 
 to use the library.
 
