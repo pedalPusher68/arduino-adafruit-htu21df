@@ -67,6 +67,8 @@ float Adafruit_HTU21DF::readTemperature(void) {
     temp /= 65536;
     temp -= 46.85;
 
+    (void) crc; //https://github.com/mongoose-os-libs/arduino-adafruit-htu21df/issues/3
+
     return temp;
 }
 
@@ -92,6 +94,8 @@ float Adafruit_HTU21DF::readHumidity(void) {
     hum *= 125;
     hum /= 65536;
     hum -= 6;
+
+    (void) crc; // https://github.com/mongoose-os-libs/arduino-adafruit-htu21df/issues/3
 
     return hum;
 }
